@@ -28,4 +28,5 @@ Program.cの上記のコードの
 
 を持つresult.csvがプロジェクト内に吐き出されます。
 
-*テスト用のデータはhttp://archive.ics.uci.edu/ml/datasets/Wine　を用いています。
+*テスト用のデータはhttp://archive.ics.uci.edu/ml/datasets/Wine
+を用いています。
