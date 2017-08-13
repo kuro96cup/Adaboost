@@ -12,9 +12,7 @@ namespace Adaboost
 
         static void Main(string[] args)
         {
-
           getCorrectParcent(3, 200, 1500);
-
         }
         static float getCorrectParcent(int k, int p, int trainingDataNum)
         {
@@ -26,7 +24,7 @@ namespace Adaboost
             string path = "csvファイルのパス";
             float[][] data = ReadCsv(path, "データのcsvファイル名");
             float[][] trainingData = new float[trainingDataNum][];
-            int[] classElement = ReadCsvInt(path, "クラス属性値のcsvファイル")[0];
+            int[] classElement = ReadCsvInt(path, "クラス属性値のcsvファイル名")[0];
             int[] trainingClassElement = new int[trainingDataNum];
             //float[][] testdata = ReadCsv(path, "winequality-red_test.csv");
             for (int j = 0; j < trainingDataNum; j++)
@@ -36,11 +34,13 @@ namespace Adaboost
             }
             float[][] testdata = new float[data.GetLength(0) - trainingDataNum][];
             int[] testClassElement = new int[data.GetLength(0) - trainingDataNum];
+
             for (int j = 0; j < data.GetLength(0) - trainingDataNum; j++)
             {
                 testdata[j] = data[j + trainingDataNum];
                 testClassElement[j] = classElement[j + trainingDataNum];
             }
+            
             Adaboost adaboost = new Adaboost(data, k, classElement, p);
             DecisionTreeClassifyer[] dtcf = adaboost.boosting();
             Console.WriteLine();
@@ -50,6 +50,7 @@ namespace Adaboost
             }
 
             int correct = 0;
+            //分類器を用いた分類の処理
             for (int j = 0; j < testdata.GetLength(0); j++)
             {
                 float[] v = new float[2] { 0, 0 };
