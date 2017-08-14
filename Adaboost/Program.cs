@@ -12,19 +12,21 @@ namespace Adaboost
 
         static void Main(string[] args)
         {
-          getCorrectParcent(3, 200, 1500);
+          getCorrectParcent(4, 200, 1500);
         }
-        static float getCorrectParcent(int k, int p, int trainingDataNum)
+       static float getCorrectParcent(int k, int p, int trainingDataNum)
         {
             /*
             int k = 3;  //分類器の数
             int p = 10; //分割数
             int trainingDataNum = 1500; //学習データ数
             */
+
             string path = "csvファイルのパス";
             float[][] data = ReadCsv(path, "データのcsvファイル名");
             float[][] trainingData = new float[trainingDataNum][];
             int[] classElement = ReadCsvInt(path, "クラス属性値のcsvファイル名")[0];
+
             int[] trainingClassElement = new int[trainingDataNum];
             //float[][] testdata = ReadCsv(path, "winequality-red_test.csv");
             for (int j = 0; j < trainingDataNum; j++)
@@ -46,9 +48,8 @@ namespace Adaboost
             Console.WriteLine();
             for (int i = 0; i < k; i++)
             {
-                Console.WriteLine("v=" + dtcf[i].v + ",element_num=" + dtcf[i].elementType);
+                Console.WriteLine("v=" + dtcf[i].v + ",op=" + dtcf[i].op + ",element_num=" + dtcf[i].elementType);
             }
-
             int correct = 0;
             //分類器を用いた分類の処理
             for (int j = 0; j < testdata.GetLength(0); j++)
@@ -68,8 +69,8 @@ namespace Adaboost
             }
             //System.Console.WriteLine(k+","+p+","+trainingDataNum+","+((float)correct / testdata.GetLength(0)) * 100);
             StreamWriter writer =
-            new StreamWriter(@"C:/Users/ohmachi/Documents/Visual Studio 2017/Projects/Adaboost/Adaboost/result.csv",true);
-            writer.WriteLine(k + "," + p + "," + trainingDataNum + "," + ((float)correct / testdata.GetLength(0)) * 100);
+            new StreamWriter(@path+"result.csv",true);
+            writer.WriteLine(k + "," + p  +","+ trainingDataNum + "," + ((float)correct / testdata.GetLength(0)) * 100);
             writer.Close();
             return ((float)correct / testdata.GetLength(0)) * 100;
     }

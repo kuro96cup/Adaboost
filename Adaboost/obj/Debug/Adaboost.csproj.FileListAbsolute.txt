@@ -4,3 +4,9 @@ c:\users\ohmachi\documents\visual studio 2017\Projects\Adaboost\Adaboost\bin\Deb
 c:\users\ohmachi\documents\visual studio 2017\Projects\Adaboost\Adaboost\obj\Debug\Adaboost.csprojResolveAssemblyReference.cache
 c:\users\ohmachi\documents\visual studio 2017\Projects\Adaboost\Adaboost\obj\Debug\Adaboost.exe
 c:\users\ohmachi\documents\visual studio 2017\Projects\Adaboost\Adaboost\obj\Debug\Adaboost.pdb
+C:\Users\omachi\Source\Repos\Adaboost\Adaboost\obj\Debug\Adaboost.csprojResolveAssemblyReference.cache
+C:\Users\omachi\Source\Repos\Adaboost\Adaboost\obj\Debug\Adaboost.exe
+C:\Users\omachi\Source\Repos\Adaboost\Adaboost\obj\Debug\Adaboost.pdb
+C:\Users\omachi\Source\Repos\Adaboost\Adaboost\bin\Debug\Adaboost.exe.config
+C:\Users\omachi\Source\Repos\Adaboost\Adaboost\bin\Debug\Adaboost.exe
+C:\Users\omachi\Source\Repos\Adaboost\Adaboost\bin\Debug\Adaboost.pdb

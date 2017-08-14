@@ -49,10 +49,11 @@ namespace Adaboost
             float errMin = 10000;
             for (int r = 0; r < data[0].GetLength(0); r++)
             {
+                for(int op=0;op<=1;op++){
                 for (float v = this.min[r] - this.step[r]; v < this.min[r] + ((float)k + 1.0f) * this.step[r]; v += this.step[r])
                 {
                     float werr = 0.0f;
-                    DecisionTreeClassifyer dtcf = new DecisionTreeClassifyer(v, r);
+                    DecisionTreeClassifyer dtcf = new DecisionTreeClassifyer(v, r,op);
                     for (int j = 0; j < data.GetLength(0); j++)
                     {
                         werr += w[j]*(dtcf.classify(data[j]) == classElement[j] ? 0.0f : 1.0f);
@@ -63,6 +64,7 @@ namespace Adaboost
                         best = dtcf;
                         errMin = werr;
                     }
+                }
                 }
             }
             
