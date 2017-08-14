@@ -28,5 +28,19 @@ Program.cの上記のコードの
 
 を持つresult.csvがプロジェクト内に吐き出されます。
 
+コンソール上では実行結果として以下のような判定条件と属性番号が出力されます。
+```
+v=9.960012,op=0,element_num=10
+v=0.5805005,op=0,element_num=9
+v=10.51252,op=0,element_num=10
+v=0.5506998,op=1,element_num=1
+v=9.830011,op=0,element_num=10
+v=0.6473006,op=0,element_num=9
+v=10.22001,op=0,element_num=10
+v=65.43003,op=1,element_num=6
+v=9.960012,op=0,element_num=10
+v=11.22752,op=0,element_num=10
+v=0.5805005,op=0,element_num=9
+```
 *テスト用のデータはhttp://archive.ics.uci.edu/ml/datasets/Wine
 を用いています。
