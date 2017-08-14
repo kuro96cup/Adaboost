@@ -16,7 +16,6 @@ namespace Adaboost
         //分類器の誤り率
         public float error;
         //分類に必要な要素を初期化
-        //判定条件の書き換えと属性番号（属性のタイプ）の書き換えは禁止。
         public DecisionTreeClassifyer(float v, int elementType,int op)
         {
             this.v = v;
